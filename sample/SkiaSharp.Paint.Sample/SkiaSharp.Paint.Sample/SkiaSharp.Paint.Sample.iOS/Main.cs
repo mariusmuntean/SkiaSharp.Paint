@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Foundation;
-using UIKit;
+﻿using UIKit;
 
-namespace SkiaSharp.Pump.Sample.iOS
+namespace SkiaSharp.Paint.Sample.iOS
 {
     public class Application
     {

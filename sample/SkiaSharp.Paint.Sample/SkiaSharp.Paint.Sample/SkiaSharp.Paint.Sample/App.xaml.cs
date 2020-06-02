@@ -1,10 +1,9 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
-namespace SkiaSharp.Pump.Sample
+namespace SkiaSharp.Paint.Sample
 {
     public partial class App : Application
     {
@@ -12,7 +11,7 @@ namespace SkiaSharp.Pump.Sample
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

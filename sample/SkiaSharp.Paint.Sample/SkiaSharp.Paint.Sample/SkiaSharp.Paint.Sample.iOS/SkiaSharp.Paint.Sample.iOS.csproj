@@ -8,9 +8,9 @@
         <ProjectGuid>{04D8ABAA-E4D9-4A73-8D23-3D226FE0A446}</ProjectGuid>
         <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
         <OutputType>Exe</OutputType>
-        <RootNamespace>SkiaSharp.Pump.Sample.iOS</RootNamespace>
+        <RootNamespace>SkiaSharp.Paint.Sample.iOS</RootNamespace>
         <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-        <AssemblyName>SkiaSharp.Pump.Sample.iOS</AssemblyName>
+        <AssemblyName>SkiaSharp.Paint.Sample.iOS</AssemblyName>
         <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
@@ -25,6 +25,7 @@
         <MtouchArch>x86_64</MtouchArch>
         <MtouchLink>None</MtouchLink>
         <MtouchDebug>true</MtouchDebug>
+        <MtouchFastDev>true</MtouchFastDev>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
         <DebugType>none</DebugType>
@@ -108,12 +109,13 @@
     <ItemGroup>
         <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.3" />
         <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
+        <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.800" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\SkiaSharp.Pump.Sample\SkiaSharp.Pump.Sample.csproj">
-            <Project>{6B608FD0-CD00-4035-8C37-1A436C55C777}</Project>
-            <Name>SkiaSharp.Pump.Sample</Name>
-        </ProjectReference>
+      <ProjectReference Include="..\SkiaSharp.Paint.Sample\SkiaSharp.Paint.Sample.csproj">
+        <Project>{3a39eeef-005c-47f2-a186-94a166168477}</Project>
+        <Name>SkiaSharp.Paint.Sample</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

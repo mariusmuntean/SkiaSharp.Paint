@@ -1,12 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharp.Pump.Sample", "SkiaSharp.Pump.Sample\SkiaSharp.Pump.Sample\SkiaSharp.Pump.Sample.csproj", "{3A39EEEF-005C-47F2-A186-94A166168477}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharp.Paint.Sample", "SkiaSharp.Paint.Sample\SkiaSharp.Paint.Sample\SkiaSharp.Paint.Sample.csproj", "{3A39EEEF-005C-47F2-A186-94A166168477}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharp.Pump.Sample.Android", "SkiaSharp.Pump.Sample\SkiaSharp.Pump.Sample.Android\SkiaSharp.Pump.Sample.Android.csproj", "{DB9429DB-E4AE-4C00-B330-AD949DC64635}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharp.Paint.Sample.Android", "SkiaSharp.Paint.Sample\SkiaSharp.Paint.Sample.Android\SkiaSharp.Paint.Sample.Android.csproj", "{DB9429DB-E4AE-4C00-B330-AD949DC64635}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharp.Pump.Sample.iOS", "SkiaSharp.Pump.Sample\SkiaSharp.Pump.Sample.iOS\SkiaSharp.Pump.Sample.iOS.csproj", "{04D8ABAA-E4D9-4A73-8D23-3D226FE0A446}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharp.Paint.Sample.iOS", "SkiaSharp.Paint.Sample\SkiaSharp.Paint.Sample.iOS\SkiaSharp.Paint.Sample.iOS.csproj", "{04D8ABAA-E4D9-4A73-8D23-3D226FE0A446}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharp.Pump", "..\..\src\SkiaSharp.Pump\SkiaSharp.Pump.csproj", "{934DF8AA-62A7-40B5-A517-7FCC1BF6803D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharp.Paint", "..\..\src\SkiaSharp.Paint\SkiaSharp.Paint.csproj", "{934DF8AA-62A7-40B5-A517-7FCC1BF6803D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EF1F1928-2FEC-435E-B7D2-43E471F1F5C2}"
 EndProject
