@@ -10,8 +10,8 @@ namespace SkiaSharp.Paint.Sample.Views
     {
         private readonly Hub _hub = Hub.Default;
         private readonly ConcurrentDictionary<Guid, PaintMessage> _paintMap = new ConcurrentDictionary<Guid, PaintMessage>();
-        private readonly PaintChannel _paintChannel;
-        private readonly PaintChannelReader _channelReader;
+        private readonly IPaintChannel _paintChannel;
+        private readonly IPaintChannelReader _channelReader;
 
         public GeometryView()
         {

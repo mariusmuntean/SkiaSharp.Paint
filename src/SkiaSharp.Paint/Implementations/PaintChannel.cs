@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using PubSub;
 using SkiaSharp.Views.Forms;
 
-namespace SkiaSharp.Paint
+namespace SkiaSharp.Paint.Implementations
 {
-    public class PaintChannel
+    internal class PaintChannel : IPaintChannel
     {
         private readonly ConcurrentDictionary<Guid, PaintMessage> _paintMap;
         private readonly Hub _hub;
@@ -24,9 +24,9 @@ namespace SkiaSharp.Paint
             });
         }
 
-        public PaintChannelReader GetChannelReader(SKCanvasView canvasView) => _channelReader ?? (_channelReader = new PaintChannelReader(this, canvasView));
+        public IPaintChannelReader GetChannelReader(SKCanvasView canvasView) => _channelReader ?? (_channelReader = new PaintChannelReader(this, canvasView));
 
-        public PaintChannelWriter CreateWriter() => new PaintChannelWriter(_hub);
+        public IPaintChannelWriter CreateWriter() => new PaintChannelWriter(_hub);
 
         internal KeyValuePair<Guid, PaintMessage>[] GetPaintMessages() => _paintMap.ToArray();
     }

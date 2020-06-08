@@ -2,9 +2,9 @@ using System.Linq;
 using SkiaSharp.Views.Forms;
 using Xamarin.Forms;
 
-namespace SkiaSharp.Paint
+namespace SkiaSharp.Paint.Implementations
 {
-    public class PaintChannelReader
+    internal class PaintChannelReader : IPaintChannelReader
     {
         private readonly PaintChannel _paintChannel;
         private readonly SKCanvasView _canvasView;

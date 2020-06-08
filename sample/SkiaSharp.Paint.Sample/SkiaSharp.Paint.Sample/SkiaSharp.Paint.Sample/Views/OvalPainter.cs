@@ -17,7 +17,7 @@ namespace SkiaSharp.Paint.Sample.Views
         private Guid _actionId;
         private int _zIndex;
         private Task _artTask;
-        private readonly PaintChannelWriter _geometryChannelWriter;
+        private readonly IPaintChannelWriter _geometryChannelWriter;
 
 
         public OvalPainter(Guid actionId, int zIndex)
@@ -56,7 +56,7 @@ namespace SkiaSharp.Paint.Sample.Views
                 var rxFactor = 0.1f + rand.NextDouble() * 0.65f;
                 var ryFactor = 0.1f + rand.NextDouble() * 0.65f;
 
-                _geometryChannelWriter.Dispatch(new PaintMessage
+                await _geometryChannelWriter.DispatchAsync(new PaintMessage
                 {
                     ActionId = _actionId,
                     ZIndex = _zIndex,

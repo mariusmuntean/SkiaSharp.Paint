@@ -9,4 +9,7 @@
         <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.3" />
         <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
     </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Implementations\" />
+    </ItemGroup>
 </Project>

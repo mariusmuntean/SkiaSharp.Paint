@@ -1,15 +1,16 @@
 using System.Collections.Concurrent;
 using PubSub;
+using SkiaSharp.Paint.Implementations;
 
 namespace SkiaSharp.Paint
 {
     public static class PaintChannelFactory
     {
-        private static readonly ConcurrentDictionary<string, PaintChannel> _paintChannels = new ConcurrentDictionary<string, PaintChannel>();
+        private static readonly ConcurrentDictionary<string, IPaintChannel> _paintChannels = new ConcurrentDictionary<string, IPaintChannel>();
 
-        public static PaintChannel CreatePaintChannel() => new PaintChannel(new Hub());
+        public static IPaintChannel CreatePaintChannel() => new PaintChannel(new Hub());
 
-        public static PaintChannel CreateOrGetNamedPaintChannel(string channelName)
+        public static IPaintChannel CreateOrGetNamedPaintChannel(string channelName)
         {
             return _paintChannels.GetOrAdd(channelName, key => new PaintChannel(new Hub()));
         }

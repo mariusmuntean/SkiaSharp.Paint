@@ -17,7 +17,7 @@ namespace SkiaSharp.Paint.Sample.Views
         private Guid _actionId;
         private int _zIndex;
         private Task _artTask;
-        private readonly PaintChannelWriter _geometryChannelWriter;
+        private readonly IPaintChannelWriter _geometryChannelWriter;
 
         public RectPainter(Guid actionId, int zIndex)
         {
