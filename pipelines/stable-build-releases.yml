@@ -1,0 +1,22 @@
+
+trigger:
+  branches:
+    include:
+    - stable
+  paths:
+    include:
+    - src/*
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+- task: PowerShell@2
+  inputs:
+    filePath: $(Build.SourcesDirectory)/pipelines/buildAndPublish.ps1
+    arguments: -apiKey $(NuGetApiKey) -buildId ""
+    failOnStderr: true
+    workingDirectory: $(Build.SourcesDirectory)/pipelines
