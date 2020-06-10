@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <VersionPrefix>0.1</VersionPrefix>
+        <VersionPrefix>0.2</VersionPrefix>
         <Authors>Marius Muntean</Authors>
         <Copyright>2020</Copyright>
         <Owners>Marius Muntean</Owners>
@@ -10,6 +10,11 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/mariusmuntean/SkiaSharp.Paint</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
+        <Description>Decouple medium to large apps that use SkiaSharp with Xamarin.Forms</Description>
+        <PackageReleaseNotes>First release.
+* Sync and async API to publish "pain" messages, i.e. little chunks of code that draw on an SKCanvas
+* Persistent drawing via actionIDs.
+* Draw order via zIndex.</PackageReleaseNotes>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
