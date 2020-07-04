@@ -1,4 +1,5 @@
-﻿using SkiaSharp.Views.Forms;
+﻿using SkiaSharp.Paint.Implementations;
+using SkiaSharp.Views.Forms;
 
 namespace SkiaSharp.Paint
 {
@@ -8,7 +9,7 @@ namespace SkiaSharp.Paint
         /// Paints the current content of the <see cref="IPaintChannel"/> onto the provided <see cref="SKCanvas"/> instance.
         /// </summary>
         /// <param name="eventArgs"></param>
-        /// <param name="shouldClearCanvasBeforePainting">Whether or not this method should clear the canvas before painting onto it.</param>
-        void Paint(SKPaintSurfaceEventArgs eventArgs, bool shouldClearCanvasBeforePainting = true);
+        /// <param name="paintOptions">Options that control the painting</param>
+        public void Paint(SKPaintSurfaceEventArgs eventArgs, PaintOptions paintOptions = null);
     }
 }

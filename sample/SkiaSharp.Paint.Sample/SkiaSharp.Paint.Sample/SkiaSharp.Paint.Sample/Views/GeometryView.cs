@@ -29,7 +29,10 @@ namespace SkiaSharp.Paint.Sample.Views
 
         private void OnPaintSurface(object sender, SKPaintSurfaceEventArgs e)
         {
-            _channelReader.Paint(e);
+            _channelReader.Paint(e, new PaintOptions()
+            {
+                ShouldClearCanvasBeforePainting = true
+            });
         }
     }
 }

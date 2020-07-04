@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using PubSub;
 
@@ -20,6 +21,16 @@ namespace SkiaSharp.Paint.Implementations
         public Task DispatchAsync(PaintMessage paintMessage)
         {
             return _hub.PublishAsync(paintMessage);
+        }
+
+        public void Remove(Guid actionId)
+        {
+            _hub.Publish(new RemoveMessage(actionId));
+        }
+
+        public Task RemoveAsync(Guid actionId)
+        {
+            return _hub.PublishAsync(new RemoveMessage(actionId));
         }
     }
 }

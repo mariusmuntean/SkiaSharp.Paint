@@ -6,6 +6,8 @@ namespace SkiaSharp.Paint.Implementations
 {
     internal class PaintChannelReader : IPaintChannelReader
     {
+        private static readonly PaintOptions DefaultPaintOptions = new PaintOptions();
+
         private readonly PaintChannel _paintChannel;
         private readonly SKCanvasView _canvasView;
 
@@ -15,14 +17,17 @@ namespace SkiaSharp.Paint.Implementations
             _canvasView = canvasView;
         }
 
-        public void Paint(SKPaintSurfaceEventArgs eventArgs, bool shouldClearCanvasBeforePainting = true)
+        public void Paint(SKPaintSurfaceEventArgs eventArgs, PaintOptions paintOptions = null)
         {
             var canvas = eventArgs.Surface.Canvas;
             var canvasSize = eventArgs.Info.Rect;
 
+            paintOptions ??= DefaultPaintOptions;
+            var (shouldClearCanvasBeforePainting, clearCanvasColor) = paintOptions;
+
             if (shouldClearCanvasBeforePainting)
             {
-                canvas.Clear(SKColors.LightGray);
+                canvas.Clear(clearCanvasColor);
             }
 
             foreach (var paintMessage in _paintChannel.GetPaintMessages().Select(pair => pair.Value).OrderBy(message => message.ZIndex))

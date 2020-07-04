@@ -73,6 +73,10 @@ namespace SkiaSharp.Paint.Sample.Views
                 });
 
                 await Task.Delay(3100);
+
+                await _geometryChannelWriter.RemoveAsync(_actionId);
+
+                await Task.Delay(1000);
             }
         }
     }

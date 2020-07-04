@@ -22,9 +22,17 @@ namespace SkiaSharp.Paint.Implementations
                 _paintMap.AddOrUpdate(newPaintMessage.ActionId, newPaintMessage, (id, oldMessage) => newPaintMessage);
                 _channelReader?.OnNewPaintMessage();
             });
+
+            _hub.Subscribe<RemoveMessage>(message =>
+            {
+                if (_paintMap.TryRemove(message.ActionIdToRemove, out _))
+                {
+                    _channelReader?.OnNewPaintMessage();
+                }
+            });
         }
 
-        public IPaintChannelReader GetChannelReader(SKCanvasView canvasView) => _channelReader ?? (_channelReader = new PaintChannelReader(this, canvasView));
+        public IPaintChannelReader GetChannelReader(SKCanvasView canvasView) => _channelReader ??= new PaintChannelReader(this, canvasView);
 
         public IPaintChannelWriter CreateWriter() => new PaintChannelWriter(_hub);
 

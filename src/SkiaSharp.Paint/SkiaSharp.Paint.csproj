@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <VersionPrefix>0.2.1</VersionPrefix>
+        <VersionPrefix>0.3.0</VersionPrefix>
         <Authors>Marius Muntean</Authors>
         <Copyright>2020</Copyright>
         <Owners>Marius Muntean</Owners>
@@ -15,6 +15,8 @@
 * Sync and async API to publish "paint" messages, i.e. little chunks of code that draw on an SKCanvas
 * Persistent drawing via actionIDs.
 * Draw order via zIndex.</PackageReleaseNotes>
+        <PackageVersion>0.3.0</PackageVersion>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

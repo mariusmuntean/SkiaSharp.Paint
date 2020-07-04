@@ -5,7 +5,7 @@ namespace SkiaSharp.Paint
     public interface IPaintChannel
     {
         /// <summary>
-        /// Creazes a new writer for this channel.
+        /// Creates a new writer for this channel.
         /// </summary>
         /// <returns></returns>
         IPaintChannelWriter CreateWriter();
