@@ -18,7 +18,7 @@ if ([string]::IsNullOrWhiteSpace($buildId)) {
     Invoke-Expression "dotnet pack --configuration Release --output $packageOutputDir $projectPath"
 }
 else {
-    $packCommand = "dotnet pack --configuration Release -p:PackageVersion=""$version-build.$buildId"" --output $packageOutputDir $projectPath"
+    $packCommand = "dotnet pack --configuration Release --version-suffix ""$("build."+$buildId)"" --output $packageOutputDir $projectPath"
     Invoke-Expression $packCommand
 }
 

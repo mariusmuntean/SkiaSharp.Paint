@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <VersionPrefix>0.3.0</VersionPrefix>
+        <VersionPrefix>0.3.1</VersionPrefix>
         <Authors>Marius Muntean</Authors>
         <Copyright>2020</Copyright>
         <Owners>Marius Muntean</Owners>
@@ -11,11 +11,7 @@
         <RepositoryUrl>https://github.com/mariusmuntean/SkiaSharp.Paint</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <Description>Decouple medium to large apps that use SkiaSharp with Xamarin.Forms</Description>
-        <PackageReleaseNotes>First release.
-* Sync and async API to publish "paint" messages, i.e. little chunks of code that draw on an SKCanvas
-* Persistent drawing via actionIDs.
-* Draw order via zIndex.</PackageReleaseNotes>
-        <PackageVersion>0.3.0</PackageVersion>
+        <PackageReleaseNotes>Added the option to remove a PaintMessage by its actionID</PackageReleaseNotes>
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
